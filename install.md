@@ -4,14 +4,20 @@
 unzip amnezia.tar.zip && tar -xvf amnezia.tar && ./amnezia
 ```
 
+### Install applications from Flatpak:
+
+```sh
+flatpak install org.telegram.desktop
+```
+
 ### Install zsh:
 
 ```sh
 sudo dnf copr enable atim/starship
 sudo dnf install zsh util-linux-user starship sqlite
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.local/share/zsh/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-history-substring-search ~/.local/share/zsh/zsh-history-substring-search
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.local/share/zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-history-substring-search ~/.zsh/zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 chsh -s /bin/zsh
 ```
 
@@ -19,6 +25,14 @@ Create `/root/.zshrc`:
 
 ```sh
 eval "$(starship init zsh)"
+```
+
+Enable zsh plugins
+
+```sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 Reboot.
