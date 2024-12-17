@@ -21,15 +21,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 chsh -s /bin/zsh
 ```
 
-Create `/root/.zshrc`:
+Create `/root/.zshrc`, update it:
 
 ```sh
 eval "$(starship init zsh)"
-```
 
-Enable zsh plugins
-
-```sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
