@@ -1,0 +1,71 @@
+{
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+      "*.twig": "html"
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.accessibilitySupport": "off",
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.stickyScroll.maxLineCount": 1,
+    "editor.fontSize": 13,
+    "editor.rulers": [80],
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Adwaita Light & colorful status bar",
+    "workbench.preferredDarkColorTheme": "Default Dark+",
+    "workbench.activityBar.location": "top",
+    "redhat.telemetry.enabled": false,
+    "cSpell.language": "en,ru",
+    "cSpell.userWords": [
+      "browserslist",
+      "oklch",
+      "pnpm",
+      "stylelint",
+      "vite"
+    ],
+    "projectManager.git.baseFolders": ["Users/evgeny/dev"],
+    "projectManager.any.maxDepthRecursion": 2,
+    "prettier.arrowParens": "avoid",
+    "prettier.quoteProps": "consistent",
+    "prettier.requireConfig": true,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "eslint.run": "onSave",
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "mssql.enableRichExperiences": true,
+    "window.customTitleBarVisibility": "auto"
+  }
