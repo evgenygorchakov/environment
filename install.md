@@ -37,6 +37,15 @@ Reboot.
 rm ~/.bash*
 ```
 
+### Install nvidia drivers
+
+```sh
+lspci -vnn | grep VGA
+sudo dnf update
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install akmod-nvidia
+```
+
 ### Install VS Code:
 
 ```sh
