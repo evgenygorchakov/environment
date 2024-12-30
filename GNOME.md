@@ -13,6 +13,7 @@
 * [Night Theme Switcher](https://extensions.gnome.org/extension/2236/night-theme-switcher/)
 * [Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
 * [Right Click Next](https://extensions.gnome.org/extension/7600/right-click-next/)
+* [Screenshort-cut](https://extensions.gnome.org/extension/6868/screenshort-cut/)
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [Tweaks & Extensions in System Menu](https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/)
 * [Vitals](https://extensions.gnome.org/extension/1460/vitals/)

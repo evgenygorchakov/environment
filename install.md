@@ -1,4 +1,4 @@
-### Install amnezia client
+### Install vpn client
 
 ```sh
 unzip amnezia.tar.zip && tar -xvf amnezia.tar && ./amnezia
@@ -8,6 +8,7 @@ unzip amnezia.tar.zip && tar -xvf amnezia.tar && ./amnezia
 
 ```sh
 flatpak install org.telegram.desktop
+flatpak install flathub io.gitlab.news_flash.NewsFlash
 ```
 
 ### Install zsh:
@@ -24,8 +25,6 @@ chsh -s /bin/zsh
 Create `/root/.zshrc`, update it:
 
 ```sh
-eval "$(starship init zsh)"
-
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -35,6 +34,15 @@ Reboot.
 
 ```sh
 rm ~/.bash*
+```
+
+
+### System Update
+
+Remove unnecessary packages:
+
+```sh
+sudo dnf remove rhythmbox gnome-contacts libreoffice-* gnome-maps
 ```
 
 ### Install nvidia drivers
