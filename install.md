@@ -14,8 +14,7 @@ flatpak install flathub io.gitlab.news_flash.NewsFlash
 ### Install zsh:
 
 ```sh
-sudo dnf copr enable atim/starship
-sudo dnf install zsh util-linux-user starship sqlite
+sudo dnf install zsh util-linux-user
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-history-substring-search ~/.zsh/zsh-history-substring-search
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
@@ -45,13 +44,29 @@ Remove unnecessary packages:
 sudo dnf remove rhythmbox gnome-contacts libreoffice-* gnome-maps
 ```
 
-### Install nvidia drivers
+### Add rpm fusion
 
 ```sh
-lspci -vnn | grep VGA
-sudo dnf update
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+### Install nvidia drivers (from https://rpmfusion.org/Howto/NVIDIA)
+
+```sh
+/sbin/lspci | grep -e VGA
+sudo dnf upgrade
+sudo dnf install kmodtool akmods mokutil openssl
+sudo kmodgenca -a
+sudo mokutil --import /etc/pki/akmods/certs/public_key.der
+systemctl reboot
+```
+When creating the public key, you will need to enter a password for the key (this is not your sudo password).
+Then, when the system boots, select 'Enroll MOK' and type  password, select reboot
+
+```sh
 sudo dnf install akmod-nvidia
+sudo dnf install xorg-x11-drv-nvidia-cuda
+modinfo -F version nvidia
 ```
 
 ### Install VS Code:
