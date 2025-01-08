@@ -44,13 +44,13 @@ Remove unnecessary packages:
 sudo dnf remove rhythmbox gnome-contacts libreoffice-* gnome-maps
 ```
 
-### Add rpm fusion
+Add RPM Fusion:
 
 ```sh
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
-### Install nvidia drivers (from https://rpmfusion.org/Howto/NVIDIA)
+Install nvidia drivers (from https://rpmfusion.org/Howto/NVIDIA)
 
 ```sh
 /sbin/lspci | grep -e VGA
@@ -69,7 +69,7 @@ sudo dnf install xorg-x11-drv-nvidia-cuda
 modinfo -F version nvidia
 ```
 
-### Install VS Code:
+Install VS Code:
 
 ```sh
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -79,3 +79,11 @@ sudo sysctl fs.inotify.max_user_instances=524288
 ```
 
 Install [VS Code extensions](./VSCode.md).
+
+Add icon theme:
+
+```sh
+sudo dnf copr enable dusansimic/themes
+sudo dnf install morewaita-icon-theme
+gsettings set org.gnome.desktop.interface icon-theme 'MoreWaita'
+```
