@@ -1,9 +1,3 @@
-### Install vpn client
-
-```sh
-unzip amnezia.tar.zip && tar -xvf amnezia.tar && ./amnezia
-```
-
 ### Install applications from Flatpak:
 
 ```sh
@@ -51,21 +45,11 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 ```
 
 Install nvidia drivers (from https://rpmfusion.org/Howto/NVIDIA)
-
+/!\ After the RPM transaction ends, please remember to wait until the kmod has been built. This can take up to 5 minutes on some systems.
 ```sh
-/sbin/lspci | grep -e VGA
-sudo dnf upgrade
-sudo dnf install kmodtool akmods mokutil openssl
-sudo kmodgenca -a
-sudo mokutil --import /etc/pki/akmods/certs/public_key.der
-systemctl reboot
-```
-When creating the public key, you will need to enter a password for the key (this is not your sudo password).
-Then, when the system boots, select 'Enroll MOK' and type  password, select reboot
-
-```sh
-sudo dnf install akmod-nvidia
-sudo dnf install xorg-x11-drv-nvidia-cuda
+sudo dnf update -y # and reboot if you are not on the latest kernel
+sudo dnf install akmod-nvidia # rhel/centos users can use kmod-nvidia instead
+sudo dnf install xorg-x11-drv-nvidia-cuda #optional for cuda/nvdec/nvenc support
 modinfo -F version nvidia
 ```
 
