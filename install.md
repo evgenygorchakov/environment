@@ -39,13 +39,13 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 ```
 
 Install nvidia drivers (from https://rpmfusion.org/Howto/NVIDIA)
-
+/!\ After the RPM transaction ends, please remember to wait until the kmod has been built. This can take up to 5 minutes on some systems.
 ```sh
 sudo dnf update -y # and reboot if you are not on the latest kernel
 sudo dnf install akmod-nvidia # rhel/centos users can use kmod-nvidia instead
 sudo dnf install xorg-x11-drv-nvidia-cuda #optional for cuda/nvdec/nvenc support
+modinfo -F version nvidia
 ```
-/!\ After the RPM transaction ends, please remember to wait until the kmod has been built. This can take up to 5 minutes on some systems.
 
 Install VS Code:
 
