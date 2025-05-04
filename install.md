@@ -1,10 +1,3 @@
-### Install applications from Flatpak:
-
-```sh
-flatpak install org.telegram.desktop
-flatpak install flathub io.gitlab.news_flash.NewsFlash
-```
-
 ### System Update
 
 Remove unnecessary packages:
@@ -21,6 +14,19 @@ Add RPM Fusion:
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
+Update system via Software Center.
+
+Install software:
+
+```sh
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+sudo dnf copr enable atim/starship
+sudo dnf copr enable dusansimic/themes
+sudo dnf install xclip micro fuse-encfs zenity borgbackup openssl ffmpegthumbnailer nss-tools mosquitto ydotool amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-ugly lame libdca libmad libmatroska x264 x265 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base gstreamer1-plugins-good gstreamer-plugins-bad gstreamer1-plugins-ugly-free mpv ffmpeg xorg-x11-drv-intel intel-media-driver webp-pixbuf-loader avif-pixbuf-loader ffmpeg-libs libva libva-utils gstreamer1-vaapi mozilla-openh264 libheif-tools unrar p7zip p7zip-plugins speech-dispatcher speech-dispatcher-utils google-chrome-stable nodejs podman git tig ripgrep xkill bat make difftastic java-21-openjdk nextcloud-client zsh util-linux-user starship sqlite input-remapper morewaita-icon-theme https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+```
+
 Install nvidia drivers (from https://rpmfusion.org/Howto/NVIDIA)
 /!\ After the RPM transaction ends, please remember to wait until the kmod has been built. This can take up to 5 minutes on some systems.
 ```sh
@@ -28,6 +34,20 @@ sudo dnf update -y # and reboot if you are not on the latest kernel
 sudo dnf install akmod-nvidia # rhel/centos users can use kmod-nvidia instead
 sudo dnf install xorg-x11-drv-nvidia-cuda #optional for cuda/nvdec/nvenc support
 modinfo -F version nvidia
+```
+
+Set Flatpak languages:
+
+```sh
+flatpak config languages --set "en;ru"
+sudo flatpak update
+```
+
+Install applications from Flatpak:
+
+```sh
+flatpak install flathub de.haeckerfelix.Fragments org.telegram.desktop flathub io.gitlab.news_flash.NewsFlash org.nickvision.tubeconverter org.gnome.Loupe com.mattjakeman.ExtensionManager io.gitlab.adhami3310.Converter net.nokyan.Resources org.gnome.baobab org.gnome.Calculator org.gnome.Logs org.gnome.Weather org.gnome.clocks org.gnome.Calendar org.gnome.Epiphany org.inkscape.Inkscape org.gnome.gitlab.YaLTeR.VideoTrimmer org.gnome.gitlab.cheywood.Iotas hu.irl.cameractrls org.gnome.Snapshot org.gnome.Papers org.gimp.GIMP dev.zed.Zed
+flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 ```
 
 ### Terminal:
