@@ -1,7 +1,7 @@
 ```bash
 EXTENSIONS=(
   piousdeer.adwaita-theme
-  formulahendry.auto-rename-tag
+  sasa.vscode-sass-format
   streetsidesoftware.code-spell-checker
   editorconfig.editorconfig
   dbaeumer.vscode-eslint
@@ -14,7 +14,7 @@ EXTENSIONS=(
   sysoev.language-stylus
   mblode.twig-language
   vue.volar
-  redhat.vscode-yaml
+  thisismanta.stylus-supremacy
 )
 for EXTENSION in ${EXTENSIONS[@]}; do
   code --install-extension $EXTENSION
