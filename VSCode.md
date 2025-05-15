@@ -1,7 +1,6 @@
 ```bash
 EXTENSIONS=(
   piousdeer.adwaita-theme
-  sasa.vscode-sass-format
   streetsidesoftware.code-spell-checker
   editorconfig.editorconfig
   dbaeumer.vscode-eslint
