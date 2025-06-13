@@ -59,6 +59,17 @@ flatpak install flathub de.haeckerfelix.Fragments org.telegram.desktop org.nickv
 flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 ```
 
+Disable Software auto-start:
+
+```sh
+dconf write /org/gnome/software/allow-updates false
+dconf write /org/gnome/software/download-updates false
+mkdir -p ~/.config/autostart && cp /etc/xdg/autostart/org.gnome.Software.desktop ~/.config/autostart/
+echo "X-GNOME-Autostart-enabled=false" >> ~/.config/autostart/gnome-software-service.desktop
+dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Software.desktop']"
+echo "X-GNOME-Autostart-enabled=false" >> ~/.config/autostart/org.gnome.Software.desktop
+```
+
 ### Terminal:
 
 ```sh
