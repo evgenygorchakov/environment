@@ -102,26 +102,19 @@ Reboot.
 rm ~/.bash*
 ```
 
-Install VS Code:
+### GNOME Settings
+
+Open Clock and add `Vladivostok`, `Moscow`, `Lisbon`, and `San Francisco`.
+
+Run Weather app and set current location.
+
+Install [JetBrains Mono](https://www.jetbrains.com/lp/mono/).
 
 ```sh
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-sudo dnf install code
-sudo sysctl fs.inotify.max_user_instances=524288
-```
-
-Install [VS Code extensions](./VSCode.md).
-
-Disable Software auto-start:
-
-```sh
-dconf write /org/gnome/software/allow-updates false
-dconf write /org/gnome/software/download-updates false
-mkdir -pv ~/.config/autostart && cp /etc/xdg/autostart/org.gnome.Software.desktop ~/.config/autostart/
-echo "X-GNOME-Autostart-enabled=false" >> ~/.config/autostart/gnome-software-service.desktop
-dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Software.desktop']"
-echo "X-GNOME-Autostart-enabled=false" >> ~/.config/autostart/org.gnome.Software.desktop
+mkdir ~/.local/share/fonts
+# Copy variable fonts
+fc-cache -f -v
+gsettings set org.gnome.desktop.interface monospace-font-name "JetBrains Mono Regular 12"
 ```
 
 Add icon theme:
