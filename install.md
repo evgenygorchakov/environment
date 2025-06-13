@@ -1,3 +1,13 @@
+## How I install my system
+
+### Install
+
+Fix booting video glitch:
+
+```sh
+sudo grubby --update-kernel=ALL --args="plymouth.use-simpledrm=0"
+```
+
 ### System Update
 
 Remove unnecessary packages:
