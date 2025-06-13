@@ -117,10 +117,14 @@ fc-cache -f -v
 gsettings set org.gnome.desktop.interface monospace-font-name "JetBrains Mono Regular 12"
 ```
 
+Disable GNOME extension version check:
+
+```sh
+gsettings set org.gnome.shell disable-extension-version-validation true
+```
+
 Add icon theme:
 
 ```sh
-sudo dnf copr enable dusansimic/themes
-sudo dnf install morewaita-icon-theme
 gsettings set org.gnome.desktop.interface icon-theme 'MoreWaita'
 ```
