@@ -80,7 +80,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 chsh -s /bin/zsh
 ```
 
-Create `/root/.zshrc`, update it:
+Install Oh My Zsh
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/evgenygorchakov/oh-my-zsh-gorchak-theme.git ${ZSH_CUSTOM}/themes/gorchak
+omz theme set gorchak/gorchak
+```
+
+Update .zshrc
 
 ```sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
