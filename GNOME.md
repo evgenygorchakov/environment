@@ -17,4 +17,3 @@
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [Tweaks & Extensions in System Menu](https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/)
 * [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
-* [VSCode Search Provider](https://extensions.gnome.org/extension/6976/vscode-search-provider/)
