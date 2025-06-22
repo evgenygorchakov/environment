@@ -36,7 +36,8 @@ sudo dnf copr enable dusansimic/themes
 sudo dnf install xclip micro fuse-encfs zenity borgbackup openssl ffmpegthumbnailer nss-tools mosquitto ydotool amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-ugly lame libdca libmad libmatroska x264 x265 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base gstreamer1-plugins-good gstreamer-plugins-bad gstreamer1-plugins-ugly-free mpv ffmpeg xorg-x11-drv-intel intel-media-driver webp-pixbuf-loader avif-pixbuf-loader ffmpeg-libs libva libva-utils gstreamer1-vaapi mozilla-openh264 libheif-tools unrar p7zip p7zip-plugins speech-dispatcher speech-dispatcher-utils google-chrome-stable nodejs podman git tig ripgrep xkill bat make difftastic java-21-openjdk nextcloud-client zsh util-linux-user ghostty sqlite morewaita-icon-theme https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 ```
 
-Install nvidia drivers (from https://rpmfusion.org/Howto/NVIDIA)
+Install [nvidia drivers](https://rpmfusion.org/Howto/NVIDIA).
+
 /!\ After the RPM transaction ends, please remember to wait until the kmod has been built. This can take up to 5 minutes on some systems.
 ```sh
 sudo dnf update -y # and reboot if you are not on the latest kernel
@@ -79,7 +80,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 chsh -s /bin/zsh
 ```
 
-Install Oh My Zsh
+Install [Oh My Zsh](https://ohmyz.sh/).
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -87,7 +88,7 @@ git clone https://github.com/evgenygorchakov/oh-my-zsh-gorchak-theme.git ${ZSH_C
 omz theme set gorchak/gorchak
 ```
 
-Update .zshrc
+Update .zshrc.
 
 ```sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -100,7 +101,7 @@ Reboot.
 rm ~/.bash*
 ```
 
-Install Atuin.
+Install [Atuin](https://atuin.sh/).
 ```sh
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 ```
