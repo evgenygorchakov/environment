@@ -108,10 +108,6 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
 ### GNOME Settings
 
-Open Clock and add `Vladivostok`, `Moscow`, `Lisbon`, and `San Francisco`.
-
-Run Weather app and set current location.
-
 Install [JetBrains Mono](https://www.jetbrains.com/lp/mono/).
 
 ```sh
