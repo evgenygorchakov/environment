@@ -18,10 +18,11 @@ sudo dnf remove cheese rhythmbox gnome-boxesd orca gnome-contacts gnome-getting-
 
 Run Software Center, disable `Fedora Flatpak` and enable Flathub and Chrome.
 
-Add RPM Fusion:
+Add RPM Fusion (for codecs) and Terra (for Zed):
 
 ```sh
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 ```
 
 Update system via Software Center.
