@@ -1,0 +1,103 @@
+{
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "diff_view_style": "split",
+  "colorize_brackets": true,
+  "indent_guides": {
+    "coloring": "indent_aware",
+    "background_coloring": "disabled"
+  },
+  "show_completions_on_input": true,
+  "buffer_font_family": "Lilex",
+  "icon_theme": "Material Icon Theme",
+  "terminal": {
+    "dock": "right"
+  },
+  // "soft_wrap": "preferred_line_length",
+  // "preferred_line_length": 80,
+  // "wrap_guides": [80],
+  "ui_font_size": 18,
+  "buffer_font_size": 18,
+  "theme": {
+    "mode": "system",
+    "light": "Adwaita Pastel Light",
+    "dark": "Adwaita Pastel Dark"
+  },
+  "git": {
+    "inline_blame": {
+      // "enabled": false
+    }
+  },
+  "file_types": {
+    "XML": ["svg"],
+    "YAML": ["**/*.bu"],
+    "JSON": ["**/*.webmanifest"],
+  },
+  "prettier": {
+    "allowed": true,
+  },
+  "languages": {
+    "Vue.js": {
+      "format_on_save": "off",
+      "prettier": { "allowed": false },
+      "formatter": { "code_actions": { "source.fixAll.eslint": true } }
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": { "code_actions": { "source.fixAll.eslint": true } }
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": { "code_actions": { "source.fixAll.eslint": true } }
+    }
+  },
+  "edit_predictions": {
+    "codestral": {
+      "model": "codestral-latest"
+    },
+    "provider": "ollama",
+    "mode": "subtle",
+    "ollama": {
+      "model": "qwen2.5-coder:7b-base",
+      "api_url": "http://localhost:11434",
+      "prompt_format": "infer",
+      "max_output_tokens": 512
+    },
+    "disabled_globs": ["**/.env*", "**/*.pem"]
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "auto_discover": false,
+      "available_models": [
+        {
+          "name": "qwen3.8:latest",
+          "display_name": "qwen3.8:latest",
+          "max_tokens": 65536,
+          "keep_alive": "30m",
+          "supports_tools": true
+        }
+      ]
+    }
+  },
+  "agent": {
+    "dock": "right",
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen3.8:latest"
+    },
+    "default_profile": "write"
+  }
+}
