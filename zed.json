@@ -1,4 +1,8 @@
 {
+  "auto_install_extensions": {
+    "adwaita-pastel": true,
+    "material-icon-theme": true
+  },
   "outline_panel": {
     "dock": "left"
   },
